@@ -54,6 +54,8 @@ static SearchEngine searchengines[] = {
     { "g", "https://www.google.com/search?q=%s" },
 };
 
+static char *defaultsearchengine = "https://www.google.com/search?q=%s";
+
 static UriParameters uriparams[] = {
 	{ "(://|\\.)suckless\\.org(/|$)", {
 	  [JavaScript] = { { .i = 0 }, 1 },

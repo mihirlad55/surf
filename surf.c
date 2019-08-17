@@ -1784,7 +1784,13 @@ parseuri(const gchar *uri) {
 					       uri + strlen(searchengines[i].token) + 1);
 	}
 
-	return g_strdup_printf("http://%s", uri);
+    for (i = 0; i < strlen(uri); i++) {
+        if (uri[i] == '.') {
+            return g_strdup_printf("http://%s", uri);
+        }
+    }
+
+    return g_strdup_printf(defaultsearchengine, uri);
 }
 
 void
