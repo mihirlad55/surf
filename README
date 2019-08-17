@@ -38,3 +38,7 @@ instance of tabbed.
 [0] http://tools.suckless.org/dmenu
 [1] http://tools.suckless.org/tabbed
 
+For youtube videos
+------------------
+Run
+   `sudo pacman -S gst-libav gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly`
