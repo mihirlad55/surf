@@ -50,6 +50,10 @@ static Parameter defconfig[ParameterLast] = {
 	[ZoomLevel]           =       { { .f = 1.0 },   },
 };
 
+static SearchEngine searchengines[] = {
+    { "g", "https://www.google.com/search?q=%s" },
+};
+
 static UriParameters uriparams[] = {
 	{ "(://|\\.)suckless\\.org(/|$)", {
 	  [JavaScript] = { { .i = 0 }, 1 },
@@ -147,7 +151,7 @@ static Key keys[] = {
 	{ MODKEY,                GDK_KEY_k,      scrollv,    { .i = -10 } },
 	{ MODKEY,                GDK_KEY_space,  scrollv,    { .i = +50 } },
 	{ MODKEY,                GDK_KEY_b,      scrollv,    { .i = -50 } },
-    { MODKEY,                GDK_KEY_f,      scroll_v,   { .i = +10000 } },
+    { MODKEY,                GDK_KEY_f,      scrollv,   { .i = +10000 } },
 	{ MODKEY,                GDK_KEY_h,      scrollh,    { .i = +10 } },
 	{ MODKEY,                GDK_KEY_l,      scrollh,    { .i = -10 } },
 
